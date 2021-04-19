@@ -1,258 +1,262 @@
-import tinycolor from 'tinycolor2'
+import palette from "./palette";
+import tinycolor from "tinycolor2";
 
-import {
+const {
+  dodgerBlue,
+  atlantis,
+  brightTurquoise,
   bunker,
   cadetBlue,
   cornflowerBlue,
-  dodgerBlue,
+  electricViolet,
   fountainBlue,
-  ghost,
   harvestGold,
+  iron,
   lavender,
   olivine,
   robRoy,
   shark,
   shuttleGray,
   sunglo,
+  whiskey,
+  woodsmoke,
   transparent,
   valencia,
-  whiskey,
   white,
-  woodsmoke,
-} from '../../../palette'
+} = palette;
 
 const setAlpha = (hex: string, alpha: number) =>
-  tinycolor(hex).setAlpha(alpha).toHex8String().toUpperCase()
+  tinycolor(hex).setAlpha(alpha).toHex8String().toUpperCase();
 
-const cadetBlue10 = setAlpha(cadetBlue, 0.1)
-const cadetBlue20 = setAlpha(cadetBlue, 0.2)
-const olivine10 = setAlpha(olivine, 0.1)
-const sunglo15 = setAlpha(sunglo, 0.15)
+const cadetBlue10 = setAlpha(cadetBlue, 0.1);
+const cadetBlue20 = setAlpha(cadetBlue, 0.2);
+const olivine10 = setAlpha(olivine, 0.1);
+const sunglo15 = setAlpha(sunglo, 0.15);
 
 // TODO is there an official theme type that can be used for the return type?
 export function getTheme(deprioritised = false): unknown {
   return {
-    $schema: 'vscode://schemas/color-theme',
-    name: 'Plastic',
-    type: 'dark',
+    $schema: "vscode://schemas/color-theme",
+    name: "Plastic Legacy",
+    type: "dark",
     colors: {
-      'activityBar.activeBorder': dodgerBlue,
-      'activityBar.background': shark,
-      'activityBar.border': bunker,
-      'activityBar.dropBackground': woodsmoke,
-      'activityBar.foreground': ghost,
-      'activityBar.inactiveForeground': shuttleGray,
+      "activityBar.activeBorder": dodgerBlue,
+      "activityBar.background": shark,
+      "activityBar.border": bunker,
+      "activityBar.dropBackground": woodsmoke,
+      "activityBar.foreground": white,
+      "activityBar.inactiveForeground": shuttleGray,
 
-      'activityBarBadge.background': sunglo,
-      'activityBarBadge.foreground': white,
+      "activityBarBadge.background": sunglo,
+      "activityBarBadge.foreground": white,
 
-      'breadcrumb.focusForeground': ghost,
-      'breadcrumb.foreground': shuttleGray,
+      "breadcrumb.focusForeground": white,
+      "breadcrumb.foreground": shuttleGray,
 
-      'button.background': sunglo,
+      "button.background": sunglo,
 
-      'contrastBorder': bunker,
+      contrastBorder: bunker,
 
-      'debugToolBar.background': woodsmoke,
+      "debugToolBar.background": woodsmoke,
 
-      'diffEditor.border': bunker,
-      'diffEditor.insertedTextBackground': olivine10,
-      'diffEditor.removedTextBackground': sunglo15,
-      'diffEditor.diagonalFill': bunker,
+      "diffEditor.border": bunker,
+      "diffEditor.insertedTextBackground": olivine10,
+      "diffEditor.removedTextBackground": sunglo15,
+      "diffEditor.diagonalFill": bunker,
 
-      'dropdown.background': woodsmoke,
-      'dropdown.border': bunker,
+      "dropdown.background": woodsmoke,
+      "dropdown.border": bunker,
 
-      'editor.background': shark,
-      'editor.findMatchBackground': transparent,
-      'editor.findMatchBorder': dodgerBlue,
-      'editor.findMatchHighlightBackground': transparent,
-      'editor.findMatchHighlightBorder': ghost,
-      'editor.foreground': cadetBlue,
-      'editor.lineHighlightBackground': cadetBlue10,
-      'editor.lineHighlightBorder': transparent,
-      'editor.rangeHighlightBorder': ghost,
-      'editor.selectionBackground': cadetBlue20,
-      'editor.selectionHighlightBackground': cadetBlue10,
-      'editor.selectionHighlightBorder': ghost,
-      'editor.wordHighlightBackground': transparent,
-      'editor.wordHighlightBorder': dodgerBlue,
-      'editor.wordHighlightStrongBackground': transparent,
-      'editor.wordHighlightStrongBorder': dodgerBlue,
+      "editor.background": shark,
+      "editor.findMatchBackground": transparent,
+      "editor.findMatchBorder": dodgerBlue,
+      "editor.findMatchHighlightBackground": transparent,
+      "editor.findMatchHighlightBorder": iron,
+      "editor.foreground": cadetBlue,
+      "editor.lineHighlightBackground": cadetBlue10,
+      "editor.lineHighlightBorder": transparent,
+      "editor.rangeHighlightBorder": iron,
+      "editor.selectionBackground": cadetBlue20,
+      "editor.selectionHighlightBackground": cadetBlue10,
+      "editor.selectionHighlightBorder": iron,
+      "editor.wordHighlightBackground": transparent,
+      "editor.wordHighlightBorder": dodgerBlue,
+      "editor.wordHighlightStrongBackground": transparent,
+      "editor.wordHighlightStrongBorder": dodgerBlue,
 
-      'editorBracketMatch.background': transparent,
-      'editorBracketMatch.border': dodgerBlue,
+      "editorBracketMatch.background": transparent,
+      "editorBracketMatch.border": dodgerBlue,
 
-      'editorCursor.foreground': cadetBlue,
+      "editorCursor.foreground": cadetBlue,
 
-      'editorError.foreground': valencia,
+      "editorError.foreground": valencia,
 
-      'editorGroup.border': bunker,
-      'editorGroup.emptyBackground': woodsmoke,
+      "editorGroup.border": bunker,
+      "editorGroup.emptyBackground": woodsmoke,
 
-      'editorGroupHeader.tabsBackground': woodsmoke,
+      "editorGroupHeader.tabsBackground": woodsmoke,
 
-      'editorGutter.addedBackground': olivine,
-      'editorGutter.deletedBackground': sunglo,
-      'editorGutter.modifiedBackground': whiskey,
+      "editorGutter.addedBackground": olivine,
+      "editorGutter.deletedBackground": sunglo,
+      "editorGutter.modifiedBackground": whiskey,
 
-      'editorHoverWidget.background': woodsmoke,
-      'editorHoverWidget.border': dodgerBlue,
+      "editorHoverWidget.background": woodsmoke,
+      "editorHoverWidget.border": dodgerBlue,
 
-      'editorIndentGuide.activeBackground': cadetBlue20,
-      'editorIndentGuide.background': bunker,
+      "editorIndentGuide.activeBackground": cadetBlue20,
+      "editorIndentGuide.background": bunker,
 
-      'editorInfo.foreground': dodgerBlue,
+      "editorInfo.foreground": dodgerBlue,
 
-      'editorLightBulb.foreground': robRoy,
+      "editorLightBulb.foreground": robRoy,
 
-      'editorLightBulbAutoFix.foreground': dodgerBlue,
+      "editorLightBulbAutoFix.foreground": dodgerBlue,
 
-      'editorLineNumber.activeForeground': ghost,
-      'editorLineNumber.foreground': shuttleGray,
+      "editorLineNumber.activeForeground": iron,
+      "editorLineNumber.foreground": shuttleGray,
 
-      'editorOverviewRuler.addedForeground': olivine,
-      'editorOverviewRuler.border': bunker,
-      'editorOverviewRuler.deletedForeground': sunglo,
-      'editorOverviewRuler.errorForeground': valencia,
-      'editorOverviewRuler.findMatchForeground': dodgerBlue,
-      'editorOverviewRuler.infoForeground': dodgerBlue,
-      'editorOverviewRuler.modifiedForeground': whiskey,
-      'editorOverviewRuler.warningForeground': robRoy,
+      "editorOverviewRuler.addedForeground": olivine,
+      "editorOverviewRuler.border": bunker,
+      "editorOverviewRuler.deletedForeground": sunglo,
+      "editorOverviewRuler.errorForeground": valencia,
+      "editorOverviewRuler.findMatchForeground": dodgerBlue,
+      "editorOverviewRuler.infoForeground": dodgerBlue,
+      "editorOverviewRuler.modifiedForeground": whiskey,
+      "editorOverviewRuler.warningForeground": robRoy,
 
-      'editorRuler.foreground': bunker,
+      "editorRuler.foreground": bunker,
 
-      'editorSuggestWidget.background': woodsmoke,
-      'editorSuggestWidget.border': dodgerBlue,
-      'editorSuggestWidget.selectedBackground': cadetBlue10,
+      "editorSuggestWidget.background": woodsmoke,
+      "editorSuggestWidget.border": dodgerBlue,
+      "editorSuggestWidget.selectedBackground": cadetBlue10,
 
-      'editorWarning.foreground': robRoy,
+      "editorWarning.foreground": robRoy,
 
-      'editorWhitespace.foreground': cadetBlue10,
+      "editorWhitespace.foreground": cadetBlue10,
 
-      'editorWidget.background': woodsmoke,
+      "editorWidget.background": woodsmoke,
 
-      'errorForeground': valencia,
+      errorForeground: valencia,
 
-      'focusBorder': dodgerBlue,
+      focusBorder: dodgerBlue,
 
-      'gitDecoration.deletedResourceForeground': sunglo,
-      'gitDecoration.ignoredResourceForeground': shuttleGray,
-      'gitDecoration.modifiedResourceForeground': whiskey,
-      'gitDecoration.untrackedResourceForeground': olivine,
+      "gitDecoration.deletedResourceForeground": sunglo,
+      "gitDecoration.ignoredResourceForeground": shuttleGray,
+      "gitDecoration.modifiedResourceForeground": whiskey,
+      "gitDecoration.untrackedResourceForeground": olivine,
 
-      'input.background': bunker,
+      "input.background": bunker,
 
-      'inputOption.activeBorder': dodgerBlue,
+      "inputOption.activeBorder": dodgerBlue,
 
-      'inputValidation.errorBackground': valencia,
-      'inputValidation.errorBorder': valencia,
-      'inputValidation.infoBackground': dodgerBlue,
-      'inputValidation.infoBorder': dodgerBlue,
-      'inputValidation.infoForeground': bunker,
-      'inputValidation.warningBackground': robRoy,
-      'inputValidation.warningBorder': robRoy,
-      'inputValidation.warningForeground': bunker,
+      "inputValidation.errorBackground": valencia,
+      "inputValidation.errorBorder": valencia,
+      "inputValidation.infoBackground": dodgerBlue,
+      "inputValidation.infoBorder": dodgerBlue,
+      "inputValidation.infoForeground": bunker,
+      "inputValidation.warningBackground": robRoy,
+      "inputValidation.warningBorder": robRoy,
+      "inputValidation.warningForeground": bunker,
 
-      'list.activeSelectionBackground': cadetBlue20,
-      'list.activeSelectionForeground': white,
-      'list.errorForeground': valencia,
-      'list.focusBackground': cadetBlue20,
-      'list.hoverBackground': cadetBlue10,
-      'list.inactiveFocusOutline': shuttleGray,
-      'list.inactiveSelectionBackground': cadetBlue20,
-      'list.inactiveSelectionForeground': ghost,
-      'list.warningForeground': robRoy,
+      "list.activeSelectionBackground": cadetBlue20,
+      "list.activeSelectionForeground": white,
+      "list.errorForeground": valencia,
+      "list.focusBackground": cadetBlue20,
+      "list.hoverBackground": cadetBlue10,
+      "list.inactiveFocusOutline": shuttleGray,
+      "list.inactiveSelectionBackground": cadetBlue20,
+      "list.inactiveSelectionForeground": iron,
+      "list.warningForeground": robRoy,
 
-      'minimap.findMatchHighlight': dodgerBlue,
-      'minimap.selectionHighlight': ghost,
+      "minimap.findMatchHighlight": dodgerBlue,
+      "minimap.selectionHighlight": iron,
 
-      'minimapGutter.addedBackground': olivine,
-      'minimapGutter.deletedBackground': sunglo,
-      'minimapGutter.modifiedBackground': whiskey,
+      "minimapGutter.addedBackground": olivine,
+      "minimapGutter.deletedBackground": sunglo,
+      "minimapGutter.modifiedBackground": whiskey,
 
-      'notificationCenter.border': bunker,
+      "notificationCenter.border": bunker,
 
-      'notificationCenterHeader.background': woodsmoke,
+      "notificationCenterHeader.background": woodsmoke,
 
-      'notifications.background': woodsmoke,
-      'notifications.border': bunker,
+      "notifications.background": woodsmoke,
+      "notifications.border": bunker,
 
-      'notificationToast.border': bunker,
+      "notificationToast.border": bunker,
 
-      'panel.background': woodsmoke,
-      'panel.border': bunker,
+      "panel.background": woodsmoke,
+      "panel.border": bunker,
 
-      'panelTitle.inactiveForeground': shuttleGray,
+      "panelTitle.inactiveForeground": shuttleGray,
 
-      'peekView.border': dodgerBlue,
+      "peekView.border": dodgerBlue,
 
-      'peekViewEditor.background': woodsmoke,
-      'peekViewEditor.matchHighlightBackground': cadetBlue20,
+      "peekViewEditor.background": woodsmoke,
+      "peekViewEditor.matchHighlightBackground": cadetBlue20,
 
-      'peekViewResult.background': woodsmoke,
-      'peekViewResult.matchHighlightBackground': cadetBlue20,
-      'peekViewResult.selectionBackground': cadetBlue10,
-      'peekViewResult.selectionForeground': ghost,
+      "peekViewResult.background": woodsmoke,
+      "peekViewResult.matchHighlightBackground": cadetBlue20,
+      "peekViewResult.selectionBackground": cadetBlue10,
+      "peekViewResult.selectionForeground": iron,
 
-      'peekViewTitle.background': woodsmoke,
+      "peekViewTitle.background": woodsmoke,
 
-      'sash.hoverBorder': cadetBlue20,
+      "sash.hoverBorder": cadetBlue20,
 
-      'scrollbar.shadow': transparent,
+      "scrollbar.shadow": transparent,
 
-      'scrollbarSlider.activeBackground': cadetBlue20,
-      'scrollbarSlider.background': cadetBlue10,
-      'scrollbarSlider.hoverBackground': cadetBlue20,
+      "scrollbarSlider.activeBackground": cadetBlue20,
+      "scrollbarSlider.background": cadetBlue10,
+      "scrollbarSlider.hoverBackground": cadetBlue20,
 
-      'sideBar.background': woodsmoke,
-      'sideBar.border': bunker,
-      'sideBar.foreground': ghost,
+      "sideBar.background": woodsmoke,
+      "sideBar.border": bunker,
+      "sideBar.foreground": iron,
 
-      'sideBarSectionHeader.background': shark,
+      "sideBarSectionHeader.background": shark,
 
-      'statusBar.background': shark,
-      'statusBar.border': bunker,
-      'statusBar.debuggingBackground': harvestGold,
-      'statusBar.debuggingForeground': bunker,
-      'statusBar.foreground': cadetBlue,
-      'statusBar.noFolderBackground': woodsmoke,
+      "statusBar.background": shark,
+      "statusBar.border": bunker,
+      "statusBar.debuggingBackground": harvestGold,
+      "statusBar.debuggingForeground": bunker,
+      "statusBar.foreground": cadetBlue,
+      "statusBar.noFolderBackground": woodsmoke,
 
-      'statusBarItem.hoverBackground': woodsmoke,
+      "statusBarItem.hoverBackground": woodsmoke,
 
-      'tab.activeBackground': shark,
-      'tab.activeBorderTop': dodgerBlue,
-      'tab.activeForeground': ghost,
-      'tab.border': bunker,
-      'tab.inactiveBackground': woodsmoke,
-      'tab.inactiveForeground': shuttleGray,
-      'tab.lastPinnedBorder': cadetBlue20,
+      "tab.activeBackground": shark,
+      "tab.activeBorderTop": dodgerBlue,
+      "tab.activeForeground": iron,
+      "tab.border": bunker,
+      "tab.inactiveBackground": woodsmoke,
+      "tab.inactiveForeground": shuttleGray,
+      "tab.lastPinnedBorder": cadetBlue20,
 
-      'terminal.ansiBlack': shuttleGray,
-      'terminal.ansiBlue': cornflowerBlue,
-      'terminal.ansiBrightBlack': shuttleGray,
-      'terminal.ansiBrightBlue': cornflowerBlue,
-      'terminal.ansiBrightCyan': fountainBlue,
-      'terminal.ansiBrightGreen': olivine,
-      'terminal.ansiBrightMagenta': lavender,
-      'terminal.ansiBrightRed': sunglo,
-      'terminal.ansiBrightWhite': cadetBlue,
-      'terminal.ansiBrightYellow': harvestGold,
-      'terminal.ansiCyan': fountainBlue,
-      'terminal.ansiGreen': olivine,
-      'terminal.ansiMagenta': lavender,
-      'terminal.ansiRed': sunglo,
-      'terminal.ansiWhite': cadetBlue,
-      'terminal.ansiYellow': harvestGold,
-      'terminal.foreground': cadetBlue,
+      "terminal.ansiBlack": shuttleGray,
+      "terminal.ansiBlue": cornflowerBlue,
+      "terminal.ansiBrightBlack": shuttleGray,
+      "terminal.ansiBrightBlue": cornflowerBlue,
+      "terminal.ansiBrightCyan": brightTurquoise,
+      "terminal.ansiBrightGreen": atlantis,
+      "terminal.ansiBrightMagenta": electricViolet,
+      "terminal.ansiBrightRed": sunglo,
+      "terminal.ansiBrightWhite": cadetBlue,
+      "terminal.ansiBrightYellow": harvestGold,
+      "terminal.ansiCyan": fountainBlue,
+      "terminal.ansiGreen": olivine,
+      "terminal.ansiMagenta": lavender,
+      "terminal.ansiRed": sunglo,
+      "terminal.ansiWhite": cadetBlue,
+      "terminal.ansiYellow": harvestGold,
+      "terminal.foreground": cadetBlue,
 
-      'titleBar.activeBackground': shark,
-      'titleBar.activeForeground': ghost,
-      'titleBar.border': bunker,
-      'titleBar.inactiveBackground': shark,
-      'titleBar.inactiveForeground': shuttleGray,
+      "titleBar.activeBackground": shark,
+      "titleBar.activeForeground": iron,
+      "titleBar.border": bunker,
+      "titleBar.inactiveBackground": shark,
+      "titleBar.inactiveForeground": shuttleGray,
 
-      'widget.shadow': transparent,
+      "widget.shadow": transparent,
     },
     tokenColors: [
       // Syntax
@@ -260,37 +264,44 @@ export function getTheme(deprioritised = false): unknown {
         // comments
         [
           [
-            'comment',
+            "comment",
             // start and end of comment blocks
-            'punctuation.definition.comment',
+            "punctuation.definition.comment",
           ],
           shuttleGray,
         ],
 
         // functions
-        [['entity.name.function', 'support.function'], lavender],
+        [
+          [
+            "entity",
+            "entity.name.function",
+            "support.function",
+            "punctuation.definition.entity",
+          ],
+          whiskey,
+        ],
 
         // import, export, return etc.
         [
           [
-            'keyword',
+            "keyword",
             // css @ in @media queries
-            'punctuation.definition.keyword',
-            // this
-            'variable.language',
+            "punctuation.definition.keyword",
           ],
           sunglo,
         ],
 
         // primitives
-        [['constant', 'support.constant'], fountainBlue],
+        [["constant", "keyword.other", "support.type"], fountainBlue],
 
         // const, var, class etc. and React JSX component tag
         [
           [
-            'storage',
+            "storage",
             // console and JSX custom components
-            'support.class',
+            "support.class",
+            "support.constant",
           ],
           cornflowerBlue,
         ],
@@ -299,8 +310,8 @@ export function getTheme(deprioritised = false): unknown {
         [
           [
             // inline code in markdown
-            'markup.inline.raw.string',
-            'string',
+            "markup.inline",
+            "string",
           ],
           olivine,
         ],
@@ -308,10 +319,9 @@ export function getTheme(deprioritised = false): unknown {
         // html tags and types
         [
           [
-            'entity.name.section',
-            'entity.name.tag',
-            'entity.name.type',
-            'support.type',
+            "entity.name",
+            // this
+            "variable.language",
           ],
           harvestGold,
         ],
@@ -320,26 +330,15 @@ export function getTheme(deprioritised = false): unknown {
         [
           [
             // css property names
-            'support.type.property-name',
-            'support.variable',
-            'variable',
+            "support.type.property-name",
+            "support.variable",
+            "variable",
           ],
-          ghost,
-        ],
-
-        // Other
-        [
-          [
-            'entity.other',
-            // css . and # for CSS classes and IDs
-            'punctuation.definition.entity',
-            'support.other',
-          ],
-          whiskey,
+          iron,
         ],
 
         [
-          ['meta.brace', 'punctuation'],
+          ["meta.brace", "punctuation"],
           deprioritised ? shuttleGray : cadetBlue,
         ],
       ].map(([scope, foreground]) => ({
@@ -352,18 +351,18 @@ export function getTheme(deprioritised = false): unknown {
         // bold
         [
           [
-            'markup.bold',
-            'punctuation.definition.bold',
+            "markup.bold",
+            "punctuation.definition.bold",
             // css ID
-            'entity.other.attribute-name.id',
+            "entity.other.attribute-name.id",
           ],
-          'bold',
+          "bold",
         ],
 
         // italic
         [
-          ['comment', 'markup.italic', 'punctuation.definition.italic'],
-          'italic',
+          ["comment", "markup.italic", "punctuation.definition.italic"],
+          "italic",
         ],
       ].map(([scope, style]) => ({
         name: style,
@@ -373,5 +372,5 @@ export function getTheme(deprioritised = false): unknown {
     ],
     semanticTokenColors: {},
     semanticHighlighting: true,
-  }
+  };
 }
