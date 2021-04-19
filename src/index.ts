@@ -1,7 +1,5 @@
 #!/usr/bin/env ts-node-script
 
-/* eslint-disable unicorn/no-process-exit -- required to exit from error */
-
 import { promises as fs } from 'fs'
 import prettier from 'prettier'
 
@@ -13,7 +11,7 @@ function prettify(object: unknown) {
   })
 }
 
-;(async () => {
+(async () => {
   await fs.mkdir('./themes', { recursive: true })
 
   try {

@@ -1,13 +1,39 @@
 {
+  "name": "plastic-legacy",
+  "displayName": "Plastic Legacy",
+  "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "./palette",
-    "./themes/*",
-    "./website"
+  "description": "A simple, legacy theme.",
+  "categories": [
+    "Themes"
   ],
+  "homepage": "https://github.com/hadialqattan/plastic-legacy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hadialqattan/plastic-legacy"
+  },
+  "author": "Hadi Alqattan",
+  "publisher": "REPLACE-ME",
   "scripts": {
+    "build": "ts-node-script ./src/index.ts",
+    "prerelease": "npm run build",
+    "release": "vsce publish",
     "lint": "eslint .",
     "prepare": "husky install"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Plastic Legacy",
+        "uiTheme": "vs-dark",
+        "path": "./themes/main.json"
+      },
+      {
+        "label": "Plastic Legacy - deprioritised punctuation",
+        "uiTheme": "vs-dark",
+        "path": "./themes/deprioritised-punctuation.json"
+      }
+    ]
   },
   "lint-staged": {
     "*.{css,json,md}": [
@@ -17,23 +43,49 @@
       "eslint --fix"
     ]
   },
-  "prettier": "@will-stone/prettier-config",
   "eslintConfig": {
-    "extends": [
-      "@will-stone/eslint-config/typescript",
-      "@will-stone/eslint-config/node",
-      "@will-stone/eslint-config/react"
+    "env": {
+      "node": true
+    },
+    "plugins": [
+      "@typescript-eslint"
     ],
-    "rules": {
-      "jsx-a11y/anchor-is-valid": "off"
-    }
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.ts",
+          "*.tsx"
+        ],
+        "parser": "@typescript-eslint/parser"
+      }
+    ]
   },
   "devDependencies": {
-    "@will-stone/eslint-config": "^2.3.0",
-    "@will-stone/prettier-config": "^4.0.0",
+    "@types/node": "^14.14.41",
+    "@types/prettier": "^2.2.3",
+    "@types/tinycolor2": "^1.4.2",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
     "eslint": "^7.24.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "tinycolor2": "^1.4.2",
+    "ts-node": "^9.1.1",
+    "typescript": "4.x",
+    "vsce": "^1.87.1"
+  },
+  "engines": {
+    "node": ">=15.0.0",
+    "vscode": "^1.45.0"
+  },
+  "icon": "images/icon.png",
+  "plastic": {
+    "title": "VSCode",
+    "appLink": "https://code.visualstudio.com/"
   }
 }
