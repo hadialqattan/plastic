@@ -43,6 +43,9 @@
       "eslint --fix"
     ]
   },
+  "prettier": {
+    "proseWrap": "always"
+  },
   "eslintConfig": {
     "env": {
       "node": true
