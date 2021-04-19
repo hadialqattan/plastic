@@ -104,7 +104,7 @@ export function getTheme(deprioritised = false): unknown {
       "editorHoverWidget.border": dodgerBlue,
 
       "editorIndentGuide.activeBackground": cadetBlue20,
-      "editorIndentGuide.background": bunker,
+      "editorIndentGuide.background": cadetBlue10,
 
       "editorInfo.foreground": dodgerBlue,
 
@@ -124,7 +124,7 @@ export function getTheme(deprioritised = false): unknown {
       "editorOverviewRuler.modifiedForeground": whiskey,
       "editorOverviewRuler.warningForeground": robRoy,
 
-      "editorRuler.foreground": bunker,
+      "editorRuler.foreground": cadetBlue10,
 
       "editorSuggestWidget.background": woodsmoke,
       "editorSuggestWidget.border": dodgerBlue,
@@ -232,22 +232,22 @@ export function getTheme(deprioritised = false): unknown {
       "tab.inactiveForeground": shuttleGray,
       "tab.lastPinnedBorder": cadetBlue20,
 
-      "terminal.ansiBlack": shuttleGray,
+      "terminal.ansiBlack": shark,
       "terminal.ansiBlue": cornflowerBlue,
       "terminal.ansiBrightBlack": shuttleGray,
-      "terminal.ansiBrightBlue": cornflowerBlue,
+      "terminal.ansiBrightBlue": dodgerBlue,
       "terminal.ansiBrightCyan": brightTurquoise,
       "terminal.ansiBrightGreen": atlantis,
       "terminal.ansiBrightMagenta": electricViolet,
-      "terminal.ansiBrightRed": sunglo,
-      "terminal.ansiBrightWhite": cadetBlue,
-      "terminal.ansiBrightYellow": harvestGold,
+      "terminal.ansiBrightRed": valencia,
+      "terminal.ansiBrightWhite": iron,
+      "terminal.ansiBrightYellow": robRoy,
       "terminal.ansiCyan": fountainBlue,
       "terminal.ansiGreen": olivine,
       "terminal.ansiMagenta": lavender,
       "terminal.ansiRed": sunglo,
       "terminal.ansiWhite": cadetBlue,
-      "terminal.ansiYellow": harvestGold,
+      "terminal.ansiYellow": whiskey,
       "terminal.foreground": cadetBlue,
 
       "titleBar.activeBackground": shark,
@@ -309,9 +309,9 @@ export function getTheme(deprioritised = false): unknown {
         // anything in quotes
         [
           [
+            "string",
             // inline code in markdown
             "markup.inline",
-            "string",
           ],
           olivine,
         ],
