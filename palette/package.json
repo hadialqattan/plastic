@@ -1,9 +1,0 @@
-{
-  "name": "palette",
-  "scripts": {
-    "test": "tsd"
-  },
-  "devDependencies": {
-    "tsd": "^0.14.0"
-  }
-}
