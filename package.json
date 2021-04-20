@@ -13,7 +13,7 @@
     "url": "https://github.com/hadialqattan/plastic-legacy"
   },
   "author": "Hadi Alqattan",
-  "publisher": "REPLACE-ME",
+  "publisher": "HadiAlqattan",
   "scripts": {
     "build": "ts-node-script ./src/index.ts",
     "prerelease": "npm run build",
