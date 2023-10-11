@@ -1,8 +1,8 @@
 # Plastic Legacy
 
 A simple syntax and UI theme for Visual Studio Code, derived from the second
-version of [Will Stone](https://wstone.io)'s
-[Plastic Theme](https://plastictheme.com/).
+version of [Will Stone](https://wstone.uk)'s
+[Plastic Theme](https://plastic.wstone.uk/).
 
 ## Notable features
 
